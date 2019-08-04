@@ -1,13 +1,13 @@
 <template>
-  <div class="board">
-  </div>
+    <div>
+        <img
+            src="../assets/chessboard.jpg"
+        />
+    </div>
 </template>
 
 <script>
 export default {
-  name: "ChessBoard",
-  props: {
-    msg: Image
-  }
+    name: 'ChessBoard'
 };
 </script>
