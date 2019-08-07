@@ -1,12 +1,12 @@
 <template>
     <img class="logo"
-        src="../assets/logo.png"
+        src="../assets/black-king.png"
     />
 </template>
 
 <script>
 export default {
-    name: 'Piece'
+    name: 'WQueen'
 };
 </script>
 

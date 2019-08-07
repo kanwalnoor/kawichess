@@ -3,19 +3,44 @@
         <img class="board"
             src="../assets/chessboard.jpg"
         />
-    <Piece class="piece"/>
+    <WQueen class="piece WQueen" v-bind:style="{  }"/>
+    <WKing class="piece WKing"/>
+    <WRook class="piece WRook"/>
+    <WPawn class="piece WPawn"/>
+    <WBishop class="piece WBishop"/>
+    <WKnight class="piece WKnight"/>
+    <BQueen class="piece BQueen"/>
+    <BRook class="piece BRook"/>
+    <BKing class="piece BKing"/>
+    <BPawn class="piece BPawn"/>
+    <BBishop class="piece BBishop"/>
+    <BKnight class="piece BKnight"/>
     </div>
 </template>
 
 <script>
 
-import Piece from "../components/Piece.vue"
+import WQueen from "../components/WQueen.vue"
+import WKing from "../components/WKing.vue"
+import WRook from "../components/WRook.vue"
+import WPawn from "../components/WPawn.vue"
+import WBishop from "../components/WBishop.vue"
+import WKnight from "../components/WKnight.vue"
+import BQueen from "../components/BQueen.vue"
+import BKing from "../components/BKing.vue"
+import BRook from "../components/BRook.vue"
+import BPawn from "../components/BPawn.vue"
+import BBishop from "../components/BBishop.vue"
+import BKnight from "../components/BKnight.vue"
 
 export default {
     name: 'ChessBoard',
-    components: {Piece
+    components: {WQueen, WKing, WKnight, WRook, WPawn, WBishop, BBishop, BKnight, BQueen, BKing, BRook, BPawn
     }
 };
+
+
+
 </script>
 
 <style scoped>
@@ -23,8 +48,8 @@ export default {
     display: inline-grid;
     width: 600px;
     height: 600px;
-    grid-template-columns: 38px auto auto auto auto auto auto auto auto 38px;
-    grid-template-rows: 38px auto auto auto auto auto auto auto auto 38px;
+    grid-template-columns: 38px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 38px;
+    grid-template-rows: 38px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 38px;
 }
 
 .board{
@@ -32,8 +57,60 @@ export default {
 }
 
 .piece{
-    width: 50px;
-    height: auto;
+    width: auto;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    align-self: center;
+}
+
+.WQueen{
+    grid-column: 5;
+    grid-row: 9;
+}
+.WKing{
+    grid-column: 6;
+    grid-row: 9;
+}
+.WBishop{
+    grid-column: 4;
+    grid-row: 9;
+}
+.WKnight{
+    grid-column: 3;
+    grid-row: 9;
+}
+.WRook{
     grid-column: 2;
+    grid-row: 9;
+}
+.WPawn{
+    grid-column: 2;
+    grid-row: 8;
+}
+.BQueen{
+    grid-column: 6;
+    grid-row: 2;
+}
+.BKing{
+    grid-column: 5;
+    grid-row: 2;
+}
+.BBishop{
+    grid-column: 3;
+    grid-row: 2;
+}
+.BKnight{
+    grid-column: 3;
+    grid-row: 9;
+}
+.BRook{
+    grid-column: 5;
+    grid-row: 9;
+}
+.BPawn{
+    grid-column: 5;
+    grid-row: 9;
 }
 </style>
