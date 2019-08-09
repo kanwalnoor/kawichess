@@ -3,7 +3,7 @@
         <img class="board"
             src="../assets/chessboard.jpg"
         />
-    <WQueen class="piece WQueen" v-bind:style="{  }"/>
+    <WQueen class="piece WQueen" v-on:click="gridTemplateColumns++" v-bind:style="{ gridTemplateColumns: gridTemplateColumns, gridTemplateRows: gridTemplateRows }"/>
     <WKing class="piece WKing"/>
     <WRook class="piece WRook"/>
     <WPawn class="piece WPawn"/>
@@ -36,12 +36,19 @@ import BKnight from "../components/BKnight.vue"
 export default {
     name: 'ChessBoard',
     components: {WQueen, WKing, WKnight, WRook, WPawn, WBishop, BBishop, BKnight, BQueen, BKing, BRook, BPawn
+    },
+
+    data() {
+    return {
+        gridTemplateRows: 5,
+        gridTemplateColumns: 5
+        }
     }
 };
 
-
-
 </script>
+
+
 
 <style scoped>
 .board-area {
@@ -65,10 +72,7 @@ export default {
     align-self: center;
 }
 
-.WQueen{
-    grid-column: 5;
-    grid-row: 9;
-}
+
 .WKing{
     grid-column: 6;
     grid-row: 9;
